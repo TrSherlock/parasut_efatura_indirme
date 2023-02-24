@@ -1,8 +1,8 @@
 const $year = 2023;
 const $month = 0;
-const firmaID = 302587;
+const url_firmaID = document.URL; // 'https://uygulama.parasut.com/{firmaID}/'
 
-fetch(`https://uygulama.parasut.com/${firmaID}/e_invoices`)
+fetch(`${url_firmaID}e_invoices`)
 .then(fjson => fjson.json())
 .then(f => {
     f.e_invoices
